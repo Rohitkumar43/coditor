@@ -36,5 +36,6 @@ function ConvexClientProvider({ children }: { children: React.ReactNode }) {
     </ConvexProviderWithClerk>
   );
 }
+// THIS IS THE CORRECT WAY TO DO IT
 
 export default ConvexClientProvider;

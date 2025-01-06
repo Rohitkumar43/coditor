@@ -2,6 +2,26 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+## how this project work step by step 
+First go through the clerk and setup the authentication 
+then go through the convex installation and connect the clerk which is a authentication provider with the convex 
+which is like a database who facilates all the sysytem from deployment to the api each and everything 
+- now on the succesfull conncetion witht the code for this fxn we use 3 file in the convex folder 
+- 1. schema.ts for the strcutre 
+
+- 2. http.ts for the ( Webhook handler for Clerk Authentication service
+-  Processes user creation events and syncs new users to the Convex database )
+- in the http.ts we use the webcooks for the confirmation that the clerk has send webhook that user is 
+- succesfully sign in and the data is also saved int he DB 
+
+3. user.ts - for the This mutation function is responsible for synchronizing user data
+ * from an external authentication provider (e.g., Clerk) into the Convex database.
+ * to check that the useris there or not 
+
+ 4. in components the convexCleintProvieder which connect all the keys of the .env file and the code (FOLLOW THE DOCS FOR CLEAR)
+
+ ==============================================HOME PAGE IMPEL** =======================================================
+
 First, run the development server:
 
 ```bash
