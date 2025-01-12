@@ -200,9 +200,11 @@ async function Header() {
             </Link>
           )}
 
+          <div className="bg-blue-50">
           <SignedIn>
             <RunButton />
           </SignedIn>
+          </div>
 
           <div className="pl-3 border-l border-gray-800">
             <HeaderProfileBtn />

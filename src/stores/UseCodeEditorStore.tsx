@@ -86,7 +86,7 @@ export const useCodeEditorStore = create<CodeEditorState>((set, get) => {
       });
     },
 
-    //Executes code using Piston API
+    //Executes code using Piston API 
     runCode: async () => {
       const { language, getCode } = get();
       const code = getCode();
@@ -121,6 +121,8 @@ export const useCodeEditorStore = create<CodeEditorState>((set, get) => {
         console.log("data back from piston:", data);
 
         // Handle various error scenarios
+        // here we also see the compiled and the interptred lang as 
+        // there are varius lang which is used compiled and some will he the interpreted 
         if (data.message) {
           set({ error: data.message, executionResult: { code, output: "", error: data.message } });
           return;
@@ -138,7 +140,7 @@ export const useCodeEditorStore = create<CodeEditorState>((set, get) => {
           });
           return;
         }
-
+// handle lang like the js ts etc 
         if (data.run && data.run.code !== 0) {
           const error = data.run.stderr || data.run.output;
           set({
