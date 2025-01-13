@@ -20,6 +20,7 @@ import { RotateCcwIcon, ShareIcon, TypeIcon } from "lucide-react";
 import { useClerk } from "@clerk/nextjs";
 import { EditorPanelSkeleton } from "./EditorPanelSkeleton";
 import useMounted from "@/hooks/useMounted";
+import ShareSnippetDialog from "./ShareSnippetDialog";
 
 function EditorPanel() {
   // Initialize Clerk for authentication and user management
@@ -170,7 +171,7 @@ function EditorPanel() {
         </div>
       </div>
       {/* Share dialog component (commented out) */}
-      {/* {isShareDialogOpen && <ShareSnippetDialog onClose={() => setIsShareDialogOpen(false)} />} */}
+       {isShareDialogOpen && <ShareSnippetDialog onClose={() => setIsShareDialogOpen(false)} />}
     </div>
   );
 }
