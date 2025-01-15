@@ -151,6 +151,7 @@ export const getSnippets = query({
   },
 });
 
+// THESE 2 FXN IS FOR THE SNIPPET PAGE DETAILS AND COMMENTS 
 export const getSnippetById = query({
   args: { snippetId: v.id("snippets") },
   handler: async (ctx, args) => {
@@ -174,7 +175,7 @@ export const getComments = query({
     return comments;
   },
 });
-
+// THESE 2 FXN IS FOR THE STAE AND STAR COUNT AND STARRED SNIPPETS
 export const isSnippetStarred = query({
   args: {
     snippetId: v.id("snippets"),
