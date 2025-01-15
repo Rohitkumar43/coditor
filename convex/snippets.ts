@@ -144,6 +144,7 @@ export const deleteComment = mutation({
 });
 
 export const getSnippets = query({
+    // NO NEED OF THE ARGUMENTS 
   handler: async (ctx) => {
     const snippets = await ctx.db.query("snippets").order("desc").collect();
     return snippets;
