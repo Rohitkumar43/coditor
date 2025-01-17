@@ -209,7 +209,7 @@ export const getSnippetStarCount = query({
     return stars.length;
   },
 });
-
+// these arw the fxn for the profile page  
 export const getStarredSnippets = query({
   handler: async (ctx) => {
     const identity = await ctx.auth.getUserIdentity();
@@ -226,3 +226,5 @@ export const getStarredSnippets = query({
     return snippets.filter((snippet) => snippet !== null);
   },
 });
+
+// THESE 2 FXN IS FOR THE PROFILE PAGE
