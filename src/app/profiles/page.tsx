@@ -25,6 +25,7 @@ import StarButton from "@/Components/StarButton";
 import CodeBlock from "./_components/CodeBlock";
 
 // Define available tabs for the profile page
+//  this will be th displayed tabs on the profile page
 const TABS = [
   {
     id: "executions",
@@ -49,6 +50,7 @@ function ProfilePage() {
   /**
    * Query to fetch user statistics
    * Retrieves metrics about user's code executions and activity
+   * if the the user is authenticated, it will fetch the user stats
    */
   const userStats = useQuery(api.codeExecutions.getUserStats, {
     userId: user?.id ?? "",
