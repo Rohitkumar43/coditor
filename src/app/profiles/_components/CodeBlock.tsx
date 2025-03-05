@@ -3,7 +3,7 @@
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { useState } from "react";
 import SyntaxHighlighter from "react-syntax-highlighter"; // Remove the curly braces
-import { atomOneDark } from "react-syntax-highlighter/"; // Correct path for the theme
+import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs"; // Correct path for the theme
 // TypeScript interface defining the props expected by the component
 interface CodeBlockProps {
   code: string;    // The actual code to be displayed
