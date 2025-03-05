@@ -311,6 +311,8 @@ function ProfilePage() {
                     </div>
                   ))}
 
+                  {/* when no star tab is there you have done */}
+
                   {(!starredSnippets || starredSnippets.length === 0) && (
                     <div className="col-span-full text-center py-12">
                       <Star className="w-12 h-12 text-gray-600 mx-auto mb-4" />
