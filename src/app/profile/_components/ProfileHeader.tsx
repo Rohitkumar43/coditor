@@ -9,7 +9,7 @@
 
 import { useQuery } from "convex/react";
 import { api } from "../../../../convex/_generated/api";
-import { Activity, Code2, Star, Timer, TrendingUp, Trophy, UserIcon, Zap } from "lucide-react";
+import { Activity, Code2, Star, Timer, TrendingUp, Trophy, Zap } from "lucide-react";
 import { motion } from "framer-motion";
 import { Id } from "../../../../convex/_generated/dataModel";
 import { UserResource } from "@clerk/types";
@@ -130,17 +130,13 @@ function ProfileHeader({ userStats, userData, user }: ProfileHeaderProps) {
         {/* User information */}
         <div>
           <div className="flex items-center gap-3 mb-2">
-            <h1 className="text-3xl font-bold text-white">{userData.name}</h1>
+            <h1 className="text-3xl font-bold text-white">Welcome {userData.name} to the Coditor</h1>
             {userData.isPro && (
               <span className="px-3 py-1 bg-purple-500/10 text-purple-400 rounded-full text-sm font-medium">
                 Pro Member
               </span>
             )}
           </div>
-          <p className="text-gray-400 flex items-center gap-2">
-            <UserIcon className="w-4 h-4" />
-            {userData.email}
-          </p>
         </div>
       </div>
 
